@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ContentProviderNotesActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/contentprovider"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/linear_white"
+        android:paddingLeft="30dp"
+        android:paddingTop="0dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="30dp">
+        <ImageView
+            android:id="@+id/contentnote_img1"
+            android:layout_width="match_parent"
+            android:layout_height="236dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="150dp"
+            android:src="@mipmap/contentprovider_img"/>
+
+
+        <EditText
+            android:id="@+id/contentnotepass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/contentnote_img1"
+            android:ems="10"
+            android:maxLength="4"
+            android:fontFamily="@font/iransansregular"
+            android:hint="@string/pass4"
+            android:inputType="text"
+            android:textAlignment="textStart"
+            android:background="@drawable/border_black"
+            android:visibility="visible"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners_red"
+            android:text="@string/accessNotes"
+            android:layout_marginTop="10dp"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/contentnotebtn"
+            android:onClick="accessNotes"
+            android:layout_below="@+id/contentnotepass"
+            android:layout_centerHorizontal="true" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="@drawable/border_red"
+            android:layout_below="@+id/contentnote_img1"
+            android:layout_marginTop="15dp"
+            android:id="@+id/contentnotelistview"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+</RelativeLayout>

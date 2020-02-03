@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".SSLActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/ssl"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/linear_white"
+        android:paddingLeft="30dp"
+        android:paddingTop="0dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="30dp">
+
+
+        <ScrollView
+            android:id="@+id/scrollssl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!-- Weak hashing algorithms -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:layout_margin="5dp"
+                        android:id="@+id/url_ssl"
+                        android:background="@drawable/border_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="0.2"
+                        android:padding="5dp"
+                        android:text="@string/sslhint"
+                        android:hint="@string/sslhint"
+                        android:imeOptions="actionUnspecified"
+                        android:inputType="textUri"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+                    <ImageView
+                        android:id="@+id/ssl_click"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        android:layout_margin="5dp"
+                        android:src="@mipmap/reload"
+                        android:background="@drawable/rounded_corners_red"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/rounded_corners_red">
+                </View>
+                <WebView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/ssl_webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/rounded_corners_red" >
+                </View>
+
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:id="@+id/linearssl"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="236dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="150dp"
+                app:srcCompat="@mipmap/ssl_img"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/javascriptDesInsec1"
+                android:fontFamily="@font/iransansregular"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:textDirection="rtl"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart = "10dp"
+                android:paddingEnd   = "10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/javascriptDesInsec2"
+                android:background="@drawable/border_red"
+                android:textSize="12sp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/colorAccent"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ToggleButton
+        android:id="@+id/toggleButton_ssl"
+        android:layout_width="91dp"
+        android:layout_height="39dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="70.5dp"
+        android:background="@drawable/toggle_switch_red"
+        android:textOff=""
+        android:textOn=""/>
+
+    <RelativeLayout
+        android:id="@+id/ssl_des"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/linear_red"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableStart="@drawable/icon_down"
+            android:fontFamily="@font/iransansbold"
+            android:gravity="center_horizontal"
+            android:text="@string/des"
+            android:textColor="@color/colorPrimary"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

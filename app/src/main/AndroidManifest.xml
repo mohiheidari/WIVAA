@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vulnerable.wivaa">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Dex2jarActivity"
+            android:label=" "
+            android:parentActivityName=".ContentProviderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".DecompileandUnzipActivity"
+            android:label=" "
+            android:parentActivityName=".ContentProviderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AdbActivity"
+            android:label=" "
+            android:parentActivityName=".ContentProviderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IntentPart2DesActivity"
+            android:label=" "
+            android:parentActivityName=".IntentPart2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SSLDesActivity"
+            android:label=" "
+            android:parentActivityName=".SSLActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SSLActivity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ClearTextDesActivity"
+            android:label=" "
+            android:parentActivityName=".ClearTextActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ClearTextActivity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JavaScriptDesActivity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JavaScriptActivity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FileDesActivity"
+            android:label=" "
+            android:parentActivityName=".FileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FileActivity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name=".NotesProvider"
+            android:authorities="com.vulnerable.wivaa.provider.notesprovider"
+            android:enabled="true"
+            android:exported="true"
+            android:grantUriPermissions="false"
+            android:multiprocess="false" />
+
+        <activity
+            android:name=".ContentProviderNotesActivity"
+            android:label=" "
+            android:parentActivityName=".ContentProviderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ContentProviderDesActivity"
+            android:label=" "
+            android:parentActivityName=".ContentProviderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ContentProviderActivity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".APICreds2Activity"
+            android:label=" "
+            android:parentActivityName=".IntentPart1Activity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.vulnerable.wivaa.action.VIEW_CREDS2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".JniBufferDesActivity"
+            android:label=" "
+            android:parentActivityName=".JniBufferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JniBufferActivity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JniHardcodingDesActivity"
+            android:label=" "
+            android:parentActivityName=".JniHardcodingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JniHardcodingActivity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DebugDesActivity"
+            android:label=" "
+            android:parentActivityName=".DebugActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DebugActivity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BackupDesActivity"
+            android:label=" "
+            android:parentActivityName=".BackupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BackupActivity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SQLInjectionDesActivity"
+            android:label=" "
+            android:parentActivityName=".SQLInjectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SQLInjectionActivity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IntentPart1DesActivity"
+            android:label=" "
+            android:parentActivityName=".IntentPart1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".APICredsActivity"
+            android:label=" "
+            android:parentActivityName=".IntentPart1Activity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.vulnerable.wivaa.action.VIEW_CREDS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".IntentPart2Activity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IntentPart1Activity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DBDesActivity"
+            android:label=" "
+            android:parentActivityName=".DBActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DBActivity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TmpDesActivity"
+            android:label=" "
+            android:parentActivityName=".TmpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TmpActivity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TxtDesActivity"
+            android:label=" "
+            android:parentActivityName=".TxtActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TxtActivity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SharedPrefDesActivity"
+            android:label=" "
+            android:parentActivityName=".SharedPrefActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SharedPrefActivity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InsecureLoggingDesActivity"
+            android:label=" "
+            android:parentActivityName=".InsecureLoggingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InsecureLoggingActivity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HardcodingDesActivity"
+            android:label=""
+            android:parentActivityName=".HardcodingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HardcodingActivity"
+            android:label=" "
+            android:parentActivityName=".ContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ContentActivity"
+            android:label=" "
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

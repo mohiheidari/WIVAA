@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".TxtDesActivity">
+
+
+    <ToggleButton
+        android:id="@+id/toggleButton_txt_des"
+        android:layout_width="91dp"
+        android:layout_height="39dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="70.5dp"
+        android:textOff=""
+        android:textOn=""
+        android:background="@drawable/toggle_switch_des_red"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/txt"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/linear_white"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingTop="0dp"
+        android:paddingRight="30dp"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/txtdes_img"
+                android:layout_width="wrap_content"
+                android:layout_height="236dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="150dp"
+                app:srcCompat="@mipmap/desimg"/>
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/txtdestitle"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/des1"
+            android:fontFamily="@font/iransansbold"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtdes1"
+                android:paddingStart = "10dp"
+                android:paddingEnd   = "10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="18dp"
+                android:text="@string/txtDes"
+                android:textColor="@color/colorPrimaryDark"
+            />
+            <ImageView
+                android:id="@+id/txtattack_img1"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/txtimg1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/txtdes2"
+                android:paddingStart = "10dp"
+                android:paddingEnd   = "10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="18dp"
+                android:text="@string/txtattackdes2"
+                android:textColor="@color/colorPrimaryDark"
+                />
+            <ImageView
+                android:id="@+id/txtattack_img2"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/txtimg2"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/txtdes3"
+                android:paddingStart = "10dp"
+                android:paddingEnd   = "10dp"
+                android:layout_marginStart="18dp"
+                android:text="@string/txtattackdes3"
+                android:paddingBottom="15dp"
+                android:textColor="@color/colorPrimaryDark"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/txtdes4"
+                android:paddingStart = "10dp"
+                android:paddingEnd   = "10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="18dp"
+                android:text="@string/adbconnect"
+                android:background="@drawable/border_red"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/colorAccent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/txtdes5"
+                android:paddingStart = "10dp"
+                android:paddingEnd   = "10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="18dp"
+                android:text="@string/txtattackdes5"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/colorPrimaryDark"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/txtdes6"
+                android:paddingStart = "10dp"
+                android:paddingEnd   = "10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="18dp"
+                android:text="@string/txtattackdes6"
+                android:background="@drawable/border_red"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/colorAccent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/txtdes7"
+                android:paddingStart = "10dp"
+                android:paddingEnd   = "10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="18dp"
+                android:text="@string/txtattackdes7"
+                android:paddingTop="15dp"
+                android:textColor="@color/colorPrimaryDark"
+                />
+            <ImageView
+            android:id="@+id/txtattack_img3"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/txtimg3"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/txtdes8"
+                android:paddingStart = "10dp"
+                android:paddingEnd   = "10dp"
+                android:layout_marginStart="18dp"
+                android:text="@string/txtattackdes8"
+                android:paddingBottom="15dp"
+                android:textColor="@color/colorPrimaryDark"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/txtdes9"
+                android:paddingStart = "10dp"
+                android:paddingEnd   = "10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="18dp"
+                android:text="@string/txtattackdes9"
+                android:background="@drawable/border_red"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/colorAccent"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtdes10"
+                android:visibility="gone"
+                android:paddingStart = "10dp"
+                android:paddingEnd   = "10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="18dp"
+                android:text="@string/txtattackdes10"
+                android:paddingTop="15dp"
+                android:textColor="@color/colorPrimaryDark"
+                />
+            <ImageView
+                android:id="@+id/txtattack_img4"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/txtimg4"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

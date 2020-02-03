@@ -1,0 +1,30 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <!-- Popup Other Style -->
+    <style name="MyPopupOtherStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!-- Used for the background -->
+        <item name="android:background">@drawable/rounded_corners_red</item>
+
+        <!-- Change Overflow Menu ListView Item Height & Property -->
+        <item name="android:listPreferredItemHeightSmall">10dp</item>
+        <item name="android:listPreferredItemPaddingLeft">5dp</item>
+        <item name="android:listPreferredItemPaddingRight">5dp</item>
+        <item name="android:divider">#FF0000</item>
+        <item name="android:dividerHeight">2dp</item>
+
+    </style>
+</resources>

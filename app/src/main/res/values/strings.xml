@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WIVAA</string>
+
+    <string name="category">Categories:</string>
+
+    <string name="cat0">REVERSE ENGINEERING</string>
+    <string name="cat1">HARDCODING</string>
+    <string name="cat2">INSECURE DATA STORAGE</string>
+    <string name="cat3">ACCESS CONTROL</string>
+    <string name="cat4">SQL INJECTION</string>
+    <string name="cat5">BACKUP/DEBUG</string>
+    <string name="cat6">C VULNERABILITIES</string>
+
+    <!--HARDCODING-->
+    <string name="hardcode">Hardcoding Issue</string>
+    <string name="hardcodeDesSec">رمز ورود خود را وارد کنید:</string>
+    <string name="pass">رمز ورود</string>
+    <string name="access">ورود</string>
+    <string name="des">توضیحات</string>
+
+    <string name="hcDesInsec">هیچ روشی برای جلوگیری از این تهدید وجود ندارد و توسعه دهندگان تا حد ممکن باید از استفاده مستقیم stringها در کد جلوگیری کنند!</string>
+
+    <string name="des1">توضیحات:</string>
+    <string name="hcDes">در این چالش یکی از مشکلات امنیتی اندروید به نام Hardcoding را بررسی میکنیم:\nتوسعه دهندگان اندروید برخی از string ها را در داخل کد اپلیکیشن hardcode میکنند. اگر این اطلاعات مهم و حساس باشند مهاجم به راحتی با decompile کردن کد میتواند به آنها دسترسی پیدا کند و از این مشکل امنیتی سواستفاده کند.\nاطلاعاتی که ممکن است توسط توسعه دهندگان اندروید hardcode شوند و منجر به مشکلات امنیتی شوند شامل پسوردها و access token و authentication string و … است.\n\n\n\n\n</string>
+
+    <string name="attack">حمله:</string>
+    <string name="hcattackdes1">هدف  ما در این چالش پیدا کردن اطلاعات hardcode شده و کد آسیب پذیر است. در نگاه اول متوجه می شویم برای دسترسی باید رمز ورود را پیدا کنیم و فهمیدن رمز به طور منطقی امکان پذیر نیست! با وارد کردن هر رمز اشتباهی در Textbox برنامه خطا می دهد و اعلام می کند که دسترسی غیر مجاز است.</string>
+    <string name="hcatttackdes2">برای پیدا کردن اطلاعات hardcode شده و فهمیدن اینکه در این کلاس چه میگذرد کد جاوا مربوط به آن را بررسی می کنیم:</string>
+    <string name="hcatttackdes3">همانطور که در تصویر بالا می بینید متوجه می شویم برای داشتن دسترسی باید <b>رمز عبور ناحیه کاربری</b> را در Textbox وارد کنیم.</string>
+
+    <!--INSECURE DATA STORAGE-->
+    <!--Insecure Logging-->
+    <string name="logging">Insecure Logging</string>
+    <string name="insecureDesSec">شماره کارت خود را وارد کنید:</string>
+    <string name="cart">شماره کارت</string>
+    <string name="logging_access">ثبت</string>
+
+    <string name="loggingDesInsec">برای حذف کلاس Log در زمان build باید کد زیر را در فایل Proguard اضافه کرد:</string>
+    <string name="loggingDesInsec2">-assumenosideeffects class android.util.Log{*;}</string>
+
+    <string name="loggingDes">در این چالش  می خواهیم اطلاعات حساس در log را پیدا کنیم.\nتوسعه دهندگان اندروید از log گرفتن به منظور trace کردن کد و پیدا کردن error و warningها استفاده می کنند.\nتوسعه دهندگان اندروید بعضی از اوقات اطلاعات حساسی را در logها ذخیره می کنند که منجر به دسترسی سایر برنامه ها و دزدی اطلاعات حساس می شود.\n\n\n\n\n\n\n\n\n</string>
+
+    <string name="loggingattackdes1">در گام اول کد مربوط به این چالش را بررسی می کنیم :</string>
+    <string name="loggingattackdes2">همانطور که در تصویر بالا مشخص شده است هر شماره کارتی که داخل EditText وارد شود در داخل log نیز می آید.برای شروع این حمله ابتدا یک شماره کارت در داخل EditText وارد می کنیم:</string>
+    <string name="loggingattackdes3">برای دسترسی به logهای سیستم ابتدا دستگاه را با دستور زیر به adb متصل میکنیم:</string>
+    <string name="adbconnect">adb connect <b>[IP-OF-GENYMOTION]</b></string>
+    <string name="loggingattackdes5">سپس دستور زیر را برای دسترسی به logها در cmd وارد می کنیم:</string>
+    <string name="loggingattackdes6">adb logcat</string>
+    <string name="loggingattackdes7"> شماره کارتی را که در Textbox وارد کردیم را در logs مشاهده می کنیم.</string>
+
+    <!--Shared Pref-->
+    <string name="sharedpref">Shared Preferences</string>
+    <string name="insecdsDesSec">وارد اکانت کاربری خود شوید:</string>
+    <string name="user">نام کاربری</string>
+
+    <string name="sharedDes">ذخیره داده های مهمی همانند رمز عبور و شماره کارت اعتباری و … به یک رویکرد امن نیاز دارد.\nتوسعه دهندگان اندروید برای ذخیره داده ها از shared Preferences، DataBase ،Temporary File ،External Storage و … استفاده می کنند.\nاز آنجایی که اگر برنامه های دیگر دسترسی Root به موبایل داشته باشند به تمامی این اطلاعات دسترسی پیدا می کنند باید این اطلاعات رمزنگاری شوند.\n\n\n\n</string>
+
+    <string name="sharedattackdes1">برای درک بهتر کد با jd-gui برنامه را مهندسی معکوس می کنیم:</string>
+    <string name="sharedattackdes2">همانطور که در تصویر بالا می بینید برنامه برای ذخیره داده ها از SharedPreferences استفاده می کند.\nابتدا فیلد های نام کاربری و رمز عبور را پر می کنیم:</string>
+    <string name="sharedattackdes3"> سپس دستگاه را به adb متصل میکنیم:</string>
+    <string name="sharedattackdes5">برای شروع حمله ابتدا لازم است به shellبرویم که برای این منظور از دستور زیر استفاده می کنیم:</string>
+    <string name="sharedattackdes7"> سپس به مسیری که فایل در آن قرار دارد می رویم:</string>
+    <string name="sharedattackdes8">cd /data/data/<b>[APP-NAME]</b>/shared_prefs/<b>[XML-NAME]</b></string>
+    <string name="sharedattackdes9">همانطور که در تصویر زیر مشاهده می کنید اطلاعاتی را که در EditText وارد کرده ایم در فایل ذخیره شده است.</string>
+
+    <string name="sharedDesInsec">برای جلوگیری از این حمله باید از الگوریتم های رمزنگاری MD5 یا SHA1 بیش از 10 بار استفاده کرد .همچنین برای امنیت بیشتر از تکنیک های رمزنگاری و کلید استفاده کرد.</string>
+
+    <!--txt-->
+    <string name="txt">External Storage</string>
+
+    <string name="txtDesInsec">برای جلوگیری از این حمله باید از الگوریتم های رمزنگاری MD5 یا SHA1 بیش از 10 بار استفاده کرد .همچنین برای امنیت بیشتر از تکنیک های رمزنگاری و کلید استفاده کرد.</string>
+
+    <string name="txtDes">ذخیره داده های مهمی همانند رمز عبور و شماره کارت اعتباری و … به یک رویکرد امن نیاز دارد.\nتوسعه دهندگان اندروید برای ذخیره داده ها از shared Preferences، DataBase ،Temporary File ،External Storage و … استفاده می کنند. از آنجایی که اگر برنامه های دیگر دسترسی Root به موبایل داشته باشند به تمامی این اطلاعات دسترسی پیدا می کنند باید این اطلاعات رمزنگاری شوند.\nدر API اندروید External Storage به عنوان SD card یا بخشی از internal storage شناخته می شود.\nنکته حائز اهمیت این است که هر برنامه ای با permission دسترسی خواندن External Storage می تواند به اطلاعات دسترسی داشته باشد و از آنها سوءاستفاده کند.</string>
+
+    <string name="txtattackdes1">با بررسی کد مربوط به این بخش ( در تصویر زیر آمده است!) متوجه می شویم که همه ی اطلاعات در داخل فایل uinfo.txt. ذخیره می شود .</string>
+    <string name="txtattackdes2">ابتدا فیلد های نام کاربری و رمز عبور را پر می کنیم:</string>
+    <string name="txtattackdes3">سپس دستگاه را به adb متصل میکنیم:</string>
+    <string name="txtattackdes5">برای دسترسی به این فایل لازم است که ابتدا وارد shell شده و سپس از دستور زیر استفاده کنیم تا به داخل دایرکتوری sdcard برویم:</string>
+    <string name="txtattackdes6">cd /mnt/sdcard</string>
+    <string name="txtattackdes7">سپس همانند تصویر زیر یک لیست از فایل های موجود در این دایرکتوری می گیریم:</string>
+    <string name="txtattackdes8">اما متاسفانه فایل مورد نظر خود را پیدا نمی کنیم!دلی این موضوع این است که دایرکتوری با ( . ) شروع می شود و به طور پیش فرض دستور بالا آن را نادیده می گیرد! می توانیم برای اینکه این مسئله پیش نیاید از دستور زیر استفاده کنیم:</string>
+    <string name="txtattackdes9">ls -l .uinfo.txt</string>
+    <string name="txtattackdes10">و در نهایت با cat فایل مورد نظرمان را مشاهده می کنیم!</string>
+
+    <!--tmp-->
+    <string name="tmp">Temporary File</string>
+
+    <string name="tmpDesInsec">برای جلوگیری از این حمله باید از الگوریتم های رمزنگاری MD5 یا SHA1 بیش از 10 بار استفاده کرد .همچنین برای امنیت بیشتر از تکنیک های رمزنگاری با کلید استفاده کرد.</string>
+
+    <string name="tmpDes">ذخیره داده های مهمی همانند رمز عبور و شماره کارت اعتباری و … به یک رویکرد امن نیاز دارد.\nتوسعه دهندگان اندروید برای ذخیره داده ها از shared Preferences، DataBase ،Temporary File ،External Storage و … استفاده می کنند. از آنجایی که اگر برنامه های دیگر دسترسی Root به موبایل داشته باشند به تمامی این اطلاعات دسترسی پیدا می کنند باید این اطلاعات رمزنگاری شوند.\n\n\n\n\n\n\n</string>
+
+    <string name="tmpattackdes1">با بررسی کد مربوط به این بخش ( در تصویر زیر آمده است!) متوجه می شویم برای ذخیره اطلاعات از Temporary file استفاده می شود.</string>
+    <string name="tmpattackdes2">ابتدا فیلد های نام کاربری و رمز عبور را پر می کنیم:</string>
+    <string name="tmpattackdes3">سپس دستگاه را به adb متصل میکنیم:</string>
+    <string name="tmpattackdes5">برای دسترسی به اطلاعات لازم است که ابتدا وارد shell شده و سپس از دستور زیر استفاده کنیم تا به داخل دایرکتوری package برویم:</string>
+    <string name="dirpackage">cd data/data/<b>[PACKAGE-NAME]</b></string>
+    <string name="tmpattackdes7">سپس همانند تصویر پایین با دستور ls لیستی از فایل های موجود در دایرکتوری را می فهمیم:</string>
+    <string name="tmpattackdes8">اگر به تصویر بالا نگاه کنید متوجه فایل tmp می شوید.در نهایت با دستور cat می توان محتوای فایل را مشاهده کرد.</string>
+
+    <!--DB-->
+    <string name="db">DataBase</string>
+
+    <string name="dbDesInsec">برای جلوگیری از این حمله باید از الگوریتم های رمزنگاری MD5 یا SHA1 بیش از 10 بار استفاده کرد .همچنین برای امنیت بیشتر از تکنیک های رمزنگاری با کلید استفاده کرد.</string>
+
+    <string name="dbDes">ذخیره داده های مهمی همانند رمز عبور و شماره کارت اعتباری و … به یک رویکرد امن نیاز دارد.\nتوسعه دهندگان اندروید برای ذخیره داده ها از shared Preferences، DataBase ،Temporary File ،External Storage و … استفاده می کنند. از آنجایی که اگر برنامه های دیگر دسترسی Root به موبایل داشته باشند به تمامی این اطلاعات دسترسی پیدا می کنند باید این اطلاعات رمزنگاری شوند.\n\n\n\n\n\n\n</string>
+
+    <string name="dbattackdes1">با بررسی کد مربوط به این بخش ( در تصویر زیر آمده است!) متوجه می شویم برای ذخیره اطلاعات از SQLite DataBase  استفاده می شود.</string>
+    <string name="dbattackdes2">ابتدا فیلد های نام کاربری و رمز عبور را پر می کنیم:</string>
+    <string name="dbattackdes3">سپس دستگاه را به adb متصل میکنیم:</string>
+    <string name="dbattackdes5">برای دسترسی به اطلاعات لازم است که ابتدا وارد shell شده و سپس از دستور زیر استفاده کنیم تا به داخل دایرکتوری package برویم:</string>
+    <string name="dbattackdes7">سپس همانند تصویر پایین با دستور ls لیستی از فایل های موجود در دایرکتوری را می فهمیم:</string>
+    <string name="dbattackdes8">اگر به تصویر بالا نگاه کنید متوجه دایرکتوری database می شوید.\nبه داخل این دایرکتوری رفته و با دستور ls لیست فایل ها را بررسی میکنیم تا پایگاه داده مربوط به این بخش (ids2)را پیدا کنیم.</string>
+    <string name="dbattackdes9">برای دسترسی به فایل پایگاه داده ابتدا با دستور exit از shell خارج می شویم و سپس به ترتیب دستورات زیر را در cmd وارد می کنیم:</string>
+    <string name="dbattackdes10">در نهایت همانطور که در تصویر زیر می بینید به اطلاعات وارد شده دسترسی پیدا کردیم:</string>
+
+    <string name="intentp1">Intent Part1</string>
+    <string name="intent_btn">مشاهده اطلاعات کارت بانکی</string>
+
+    <string name="intentDesInsec">برای اینکه یک component بین چند اپلیکیشن مشترک باشد باید شرایط زیر برقرار باشد:\n
+1)برنامه باید یکسری permission برای component مشترک بین برنامه ها تعریف کند.\n
+2)هیچ کدام از component مشترک نباید اطلاعات مهمی را فاش کند.\n
+3)نباید Component های مشترک امنیت کاربر را تهدید کند.</string>
+    <string name="accessDes">اندروید ساختار پیچیده ای دارد و روی Linux kernel، ماشین مجازی Dalvik و موارد دیگر ساخته شده است اما چهار مولفه اصلی دارد:\n1)Activities:\nیک صفحه نمایش متمرکز واحد که کاربر با آن می تواند ارتباط برقرار کند.\n2)Content Provider:\nمدیریت دسترسی به مخزن اطلاعات تولید شده توسط اپلیکیشن.\n3)Broadcast Receiver:\nاپلیکیشن ها می توانند یک سری پیام را به همدیگر برسانند گه به این فرایند Broadcast می گویند.\n4)Services:\nمولفه ای برای انجام عملیات در پیش زمینه مانند پخش موسیقی، ارتباط با content provider ها و ... . \nبخش های مختلف یک اپلیکیشن نباید توسط سایر اپلیکیشن ها در دسترس باشد. در بعضی از موارد اپلیکیشن می تواند برخی از منابع خود را با سایر برنامه ها تقسیم کند.برای مثال  با فرستادن یک Intent </string>
+
+    <string name="intentp1attacktv1">با کلیک بر روی کلید مشاهده اطلاعات می توانید اطلاعات مربوط به کارت بانکی کاربر را مشاهده کنید .\n در این فعالیت قصد داریم که بدون کلیک بر روی کلید اطلاعات کارت بانکی را مشاهده کنیم.\n با بررسی کد مربوط به این بخش ( در تصویر زیر آمده است!) متوجه می شویم Intent ذکر شده در Intentp1Activity در داخل Manifest متعلق به APICredsActivity است. </string>
+    <string name="intentp1attacktv2">باید به این نکته توجه کنیم که Intent Filter نباید به عنوان یک مکانیزم امنیتی استفاده شود زیرا activity موردنظر قابل دسترس برای سایر اپلیکیشن ها می شود.\nبرای شروع حمله ابتدا دستگاه را به adb متصل میکنیم:</string>
+    <string name="intentp1attacktv4">سپس دستورات زیر را به ترتیب در cmd وارد میکنیم:</string>
+    <string name="adbshell">adb shell</string>
+    <string name="intentp1attacktv6">am start -n com.vulnerable.wivaa/.APICredsActivity -a com.vulnerable.wivaa.action.VIEW_CREDS</string>
+    <string name="intentp1attacktv7">همانطور که در تصویر زیر میبینید activity موردنظر بدون فشردن کلید باز میشود.</string>
+
+
+    <string name="intentp2">Intent Part2</string>
+    <string name="radiobtn1"> وارد کردن رمز عبور</string>
+    <string name="radiobtn2">رمز ورود را قبلا وارد کرده اید!</string>
+
+    <string name="intentp2attacktv1">در این چالش همانند چالش قبلی می خواهیم که به اطلاعات کارت بانکی دسترسی پیدا کنیم با این تفاوت که نیاز به ثبت نام دارد!\nدر این فعالیت قصد داریم که بدون ثبت نام بر روی کلید اطلاعات کارت بانکی را مشاهده کنیم.\n با بررسی کد مربوط به این بخش ( در تصویر زیر آمده است!) متوجه می شویم Intent ذکر شده در Intentp2Activity در داخل Manifest متعلق به APICreds2Activity است. </string>
+    <string name="intentp2attacktv2">باید به این نکته توجه کنیم که Intent Filter نباید به عنوان یک مکانیزم امنیتی استفاده شود زیرا activity موردنظر قابل دسترس برای سایر اپلیکیشن ها می شود.\n برای شروع حمله ابتدا دستگاه را به adb متصل میکنیم:</string>
+    <string name="intentp2attacktv4">سپس دستورات زیر را به ترتیب در cmd وارد میکنیم:</string>
+    <string name="intentp2attacktv5">adb shell am start -n com.vulnerable.wivaa/.APICreds2Activity -a com.vulnerable.wivaa.action.VIEW_CREDS2</string>
+    <string name="intentp2attacktv6">اما با اجرا کردن دستور بالا صفحه ی زیر باز می شود و تا زمانی که ثبت نام نکرده باشید توانایی دسترسی به اطلاعات کارت را ندارید.\nاز آنجایی که این دستور موفقیت آمیز نبود متوجه می شویم که موارد دیگری نیز تاثیر گذارند.\nبرای بررسی به فایل APICreds2Activity مراجعه می کنیم.</string>
+    <string name="intentp2attacktv7">همانطور که در تصویر بالا مشاهده می کنید متغیر bcheck تاثیر گذار است و باید مقدار false داشته باشد تا کار کند. سپس مقدار chk_pin را در فایل stringها مشاهده می کنیم.همانطور که در تصویر زیر میبینید مقدار آن برابر با check_pin است.</string>
+    <string name="intentp2attacktv8">در نهایت برای مشاهده اطلاعات کاربری دستورات  زیر را در cmd وارد می کنیم:</string>
+    <string name="intentp2attacktv9">adb shell am start -a com.vulnerable.wivaa.action.VIEW_CREDS2 -n com.vulnerable.wivaa/.APICreds2Activity –ez check_pin false</string>
+    <string name="intentp2attacktv10">همانطور که در تصویر پایین میبینید activity موردنظر بدون ثبت نام کردن باز می شود.</string>
+
+
+    <string name="contentprovider">Content Provider</string>
+    <string name="contentproviderpass">ایجاد/تغییر رمز عبور</string>
+    <string name="contentprovideraccess">یادداشت های مخفی</string>
+
+    <string name="contentproviderattacktv1">در این چالش باید یک رمز عبور مشخص کنیم و بعد از آن برای دسترسی به رمز های موجود از این رمز استفاده کنیم. البته هربار در هنگام ورود به این چالش می توان رمز لازم برای دسترسی به اطلاعات را تغییر داد.\nهمانطور که می توان حدس زد هدف ما در این چالش دسترسی به اطلاعات خصوصی بدون تغییر یا ایجاد رمز هست.\nدر گام اول فایل Manifest را بررسی می کنیم.همانطور که در تصویر زیر می بینید یک content provider تعریف شده است وبا android:exported=”true” قابلیت دسترسی توسط سایر برنامه ها را پیدا کرده است.</string>
+    <string name="contentproviderattacktv2">Content providers توسط URI که با content:// آغاز می شود تعریف می شوند.برای اطلاع از این URI به بررسی کلاس NotesProvider.java می پردازیم:</string>
+    <string name="contentproviderattacktv3">همانطور که در تصویر بالا میبینیم URI مربوط به این چالش مقدار زیر را دارد:</string>
+    <string name="contentproviderattacktv4">content://com.vulnerable.wivaa.provider.notesprovider/notes</string>
+    <string name="contentproviderattacktv5">سپس برای دسترسی به اطلاعات دستور زیر را در cmd وارد می کنیم:</string>
+    <string name="contentproviderattacktv6">adb shell content query –-uri content://com.vulnerable.wivaa.provider.notesprovider/notes</string>
+    <string name="contentproviderattacktv7">و همانطور که در تصویر زیر مشاهده می کنید می بینید بدون این که رمز را ایجاد یا تغییر بدهیم به اطلاعات خصوصی دسترسی پیدا کردیم.</string>
+
+    <string name="contentproviderDesInsec1">برای جلوگیری از این حمله باید permission مربوط به exported محدود باشد:</string>
+    <string name="contentproviderDesInsec2">android:exported=”false”</string>
+
+    <string name="sql">SQL Injection</string>
+    <string name="sqlDesSec"> شماره تلفن خود را وارد کنید:</string>
+    <string name="sqlphone">شماره تلفن</string>
+
+    <string name="sqlDes">در این چالش می خواهیم به بررسی SQL Injection بپردازیم.این مشکل هنگامی رخ می دهد که اطلاعاتی که توسط کاربر وارد می شود فیلتر نمی شود. \nبرای مثال هنگامی که کاربر یک ورودی به برنامه بدهد و توسط برنامه فیلتر نشود مهاجم می تواند با اضافه کردن یک چیز مخرب به تمام اطلاعات داخل پایگاه داده دسترسی داشته باشد. مهاجم پس از دسترسی به پایگاه داده با queries مختلف اطلاعات را حذف یا دستکاری کند!\n\n\n\n</string>
+
+    <string name="sqlDesInsec1">برای جلوگیری از این آسیب پذیری باید دقت کرد که ورودی ها به گونه ای فیلتر شوند که کاراکترهای آسیب پذیر همانند \' را نپذیرند. برای مثال شماره تلفن ها فقط عدد، ایمیل ها ورودی متناسب با ایمیل و … بپذیرند.\nدر این چالش از آنجایی که با شماره تلفن سروکار داریم  می توانیم برای فیلتر ورودی گزینه زیر را به EditText اضافه کنیم:</string>
+    <string name="sqlDesInsec2">android:inputType="phone|number"</string>
+
+
+    <string name="sqlattacktv1">در این چالش با وارد کردن نام کاربری می توانیم به اطلاعات آن کاربر دست پیدا کنیم اما قصد ما در این چالش این است که به همه ی اطلاعات بدون وارد کردن نام کاربری دسترسی داشته باشیم.\nاز آنجایی که قابلیت جستجو کردن دارد فرض ابتدایی ما این است که این اطلاعات را از DataBase بر اساس ورودی جستجو میکند و احتمالا SQL Injection وجود دارد.\n ابتدا فرض خود را با (\') شروع می کنیم. اما هیچ جوابی دریافت نمی کنیم! برای دریافت اطلاعات بیشتر به logcat (تصویر زیر) مراجعه می کنیم. با توجه به logcat متوجه می شویم که از dynamic query استفاده می کند و امکان SQL Injection‌ وجود دارد.</string>
+    <string name="sqlattacktv2">از آنجایی که با خطا روبرو شدیم یک گزینه دیگر (\") را امتحان می کنیم.همانطور که در تصویر زیر می بینید برنامه دچار خطا نمی شود و در حال جستجوی داده وارد شده است.</string>
+    <string name="sqlattacktv3">حال گزینه ی (\"\')را وارد می کنیم و با بررسی logcat می توانیم نتیجه بگیریم که تعداد فرد \' منجر به خطا میشود.(تصویر پایین)</string>
+    <string name="sqlattacktv4">حال باید مقدار string را به گونه ای انتخاب کنیم که مقدار true داشته باشد.برای مثال می توانیم از string زیر استفاده کنیم:</string>
+    <string name="sqlattacktv5">1\' or \'1\' != \'2</string>
+    <string name="sqlattacktv6">با وارد کردن string ذکر شده می توان به تمامی اطلاعات بدون داشتن نام کاربری دسترسی داشت.(همانند تصویر زیر)</string>
+
+
+    <string name="backup">Backup</string>
+
+    <string name="backupDesInsec1">برای جلوگیری از این حمله باید permission مربوط به backup محدود باشد:</string>
+    <string name="backupDesInsec2">android:allowBackup=”false”</string>
+
+    <string name="backupDes">در این چالش به قابلیت backup کردن می پردازیم.اندروید همانند خیلی از سیستم عامل ها امکان backup گرفتن از برنامه ها را می دهد. این قابلیت با این که کارآمد است اما ممکن است منجر به  سواستفاده از اطلاعات مهم و حساس شود.\nهنگامی که از یک برنامه backup گرفته می شود یک فایل چند قسمتی بدست می آید. ۲۴ بایت اول شامل header و هم چنین اطلاعاتی در مورد نحوه فشرده سازی و رمزنگاری backup به کاربر می دهد و قسمت بعدی شامل backup از داده ها است که به صورت یک فایل فشرده شامل پایگاه داده ها، فایل ها و APK  است.\n</string>
+
+    <string name="backupattacktv1">برای شروع حمله در این چالش باید مطمئن شویم که permission مربوط به backup محدود نباشد! برای بررسی این permission به فایل manifest می رویم و چک میکنیم که این مقدار true باشد.\nابتدا همانند تصویر زیر داخل فیلدهای خالی را پر میکنیم:</string>
+    <string name="backupattacktv2">در گام بعدی با کمک دستور زیر از اپلیکیشن backup می گیریم:</string>
+    <string name="backupattacktv3">adb backup -f backup.ab [PACKAGE-NAME]</string>
+    <string name="backupattacktv4">با وارد کردن دستور بالا در اندروید یک صفحه همانند تصویر زیر باز می شود که با کلیک بر روی backup از اپلیکیشن backup می گیرد و یک فایل با فرمت ab تولید می کند.</string>
+    <string name="backupattacktv5">همانطور که قبلا گفتیم ۲۴ بایت اول شامل داده نیست در نتیجه باید آن را حذف کنیم.برای اینکار از  ابزار dd استفاده می کنیم که یک فایل با فرمت tar تولید می شود.برای این منظور از دستور زیر استفاده می کنیم.</string>
+    <string name="backupattacktv6">dd if=backup.ab bs=1 skip=24 | python -c "import zlib,sys;sys.stdout.write(zlib.decompress(sys.stdin.read()))" > backup.tar</string>
+    <string name="backupattacktv7">در گام بعدی به ترتیب دستورات زیر را وارد میکنیم:</string>
+    <string name="backupattacktv8">Tar -tf backup.tar backup.list</string>
+    <string name="backupattacktv9">Tar -xf backup.tar</string>
+    <string name="backupattacktv10">برای مشاهده اطلاعات وارد شده باید وارد فولدر sp شد. همانطور که در تصویر زیر میبینید یک فایل xml وجود دارد .</string>
+    <string name="backupattacktv11">در نهایت برای مشاهده اطلاعات باید با دستور cat فایل را مشاهده کنید.</string>
+
+
+    <string name="debug">Debug</string>
+    <string name="debugDesSec">به اپلیکیشن WIVAA خوش آمدید:)</string>
+    <string name="resume">ادامه</string>
+
+    <string name="debugDes">در این چالش به قابلیت debug کردن می پردازیم.این قابلیت به مهاجم ها امکان دسترسی به اطلاعات حساس و کنترل برنامه را می دهد.\nدر این چالش از ابزارهای مختلفی استفاده می شود اما تمرکز اصلی بر روی jdwp است.debug یک نقش اساسی در درک خط های مختلف کد و حل خطاهای پیش رو دارد. در نتیجه این قابلیت در هنگام پیاده سازی بسیار مفید است اما بعد از منتشر شدن منجر به سواستفاده از اطلاعات مهم و حساس می شود.\n\n</string>
+
+    <string name="debugDesInsec1">برای جلوگیری از این حمله باید permission مربوط به debug محدود باشد:</string>
+    <string name="debugDesInsec2">android:debuggable=”false”</string>
+
+    <string name="debugattacktv1">برای شروع حمله در این چالش باید مطمئن شویم که permission مربوط به debug محدود نباشد! برای بررسی این permission با کمک apktool به فایل manifest می رویم و چک میکنیم که این مقدار true باشد.\nهمانطور که قبلا بیان شد در این چالش از jdwp استفاده می کنیم. در داخل برنامه های اندرویدی adb با کمک دستور jdwp لیستی از PIDS از برنامه های در حال اجرا در واسط را نشان می دهد.\nدر این جا برای این که از PID برنامه آگاه شویم ابتدا یک سری بدون اینکه اپلیکیشن را باز کنیم دستور زیر را در ترمینال وارد می کنیم(همانند تصویر زیر):</string>
+    <string name="jdwp">adb jdwp</string>
+    <string name="debugattacktv3">در گام بعدی برنامه موردنظر را اجرا میکنیم و سپس دستور ذکر شده را در ترمینال وارد میکنیم (تصویر زیر)و به PID جدید که در پایین لیست اضافه شده نگاه می کنیم:</string>
+    <string name="debugattacktv4">در این مورد PID مورد نظر 1700 است و متعلق به برنامه مورد نظرمان است. در گام بعدی نیاز به یک port listener برای ارسال ترافیک داریم.برای این منظور از دستور زیر استفاده می کنیم:</string>
+    <string name="debugattacktv5">adb forward tcp:[PORT-LISTENER] jdwp:[PID]</string>
+    <string name="debugattacktv6">در گام بعدی برای اتصال debugger به PID از دستور زیر استفاده می کنیم:</string>
+    <string name="debugattacktv7">Jdb -attach localhost:[PORT-LISTENER]</string>
+    <string name="debugattacktv8">برای تغییر برنامه در زمان اجرا برای کنترل جریان به یک سری breakpoint نیاز داریم. از آنجایی که با کلاس و متدهای برنامه آشنا نیستیم باید دستورات زیر را وارد کنیم.\nهمانند تصویر زیر برای فهمیدن کلاس های موجود در برنامه از دستور classes استفاده می کنیم:</string>
+    <string name="debugattacktv9">اگرچه کلاس های زیادی وجود دارد با scroll کردن به کلاس های زیر که مرتبط به این چالش است بر می خوریم:</string>
+    <string name="debugattacktv10">برای اطلاع از متدها در برنامه از دستور زیر استفاده می کنیم :</string>
+    <string name="debugattacktv11">Methods <b>[CLASS-NAME]</b></string>
+    <string name="debugattacktv12">لیست متدهای مربوط به کلاس را می توان در تصویر زیر مشاهده کرد:</string>
+    <string name="debugattacktv13">حال برای گذاشتن breakpoint می توان از دستور زیر همانند تصویر زیر استفاده کرد:</string>
+    <string name="debugattacktv14">Stop in <b>[METHOD-NAME]</b></string>
+    <string name="debugattacktv15">در گام بعدی روی دکمه ادامه کلیک می کنیم. در ادامه باید با دستورات مختلف باید مقادیر متغیرهای حساس را چک کنیم.برای درک بیشتر گام های بعدی ابتدا قسمتی از کد که مربوط به این متد است را بررسی می کنیم:</string>
+    <string name="debugattacktv16">ابتدا برای بررسی متغیرها از دستور locals استفاده می کنیم. از آنجایی که به متغیر قابل توجه ای برخورد نکردیم از دستور next استفاده می کنیم تا به خط بعدی برویم.این دو گام را تا جایی ادامه می دهیم تا همانند تصویر زیر به مقدار متغیر secret بخوریم. تا اینجا مقدار همه متغیرها مشخص شده است. در گام بعدی دستور step را استفاده می کنیم تا در دستور setText تغییر ایجاد کنیم.</string>
+    <string name="debugattacktv17">با دستور locals مقادیر نهایی متغیرها را چک می کنیم (همانند تصویر زیر):</string>
+    <string name="debugattacktv18">و در گام آخربا set text و run مقدار نهایی را تغییرمی دهیم:</string>
+    <string name="debugattacktv19">همانطور که در تصویر زیر مشاهده می کنید توانستیم مقدار را تغییر بدهیم.</string>
+
+
+    <string name="chk_pin">check_pin</string>
+
+    <string name="api2Des1">برای مشاهده رمز عبور روی کارت ضربه بزنید!</string>
+    <string name="api2Des2">رمز ورود را وارد کنید:</string>
+    <string name="cat7">WebView</string>
+
+
+    <string name="pkey">notespin</string>
+    <string name="pass4">رمز عبور چهار رقمی</string>
+    <string name="accessNotes">دسترسی به نوشته ها</string>
+    <string name="file">File</string>
+    <string name="filehint">file://Location</string>
+
+    <string name="fileDes">در اندروید برای بارگیری صفحات وب از webview استفاده می کنند. در استفاده از webview باید حداکثر دقت خود را به کار بگیریم تا مشکل امنیتی به وجود نیاید. هر webview اگر permission مربوطه را داشته باشد می تواند به فایل های داخل موبایل دسترسی داشته باشد و از آنها سو استفاده کند.\n\n\n\n\n</string>
+
+    <string name="fileattacktv1">برای شروع حمله در این چالش باید مطمئن شویم که permission مربوط به دسترسی به فایل ها محدود نباشد! همانطور که در تصویر زیر مشاهده می کنید permissions مربوطه محدود نیست.</string>
+    <string name="fileattacktv2">بعد از اطمینان همانطور که قبلا ذکر کردیم webviews می توانند به فایل های داخل اندروید دسترسی داشته باشند .برای این دسترسی لازم است که از فرمت زیر داخل EditTextاستفاده کنیم:</string>
+    <string name="fileattacktv3">file://<b>[LOCATION-OF-FILE]</b></string>
+    <string name="fileattacktv4">برای مثال در تصویر زیر یک نمونه از این دسترسی به فایل ها را مشاهده می کنید:</string>
+
+    <string name="fileDesInsec1">برای جلوگیری از این حمله باید permission مربوط به file محدود باشد:</string>
+    <string name="fileDesInsec2">webSettings.setAllowFileAccess(false);\nwebSettings.setAllowUniversalAccessFromFileURLs(false);</string>
+
+
+    <string name="javascript">JavaScript</string>
+    <string name="javascripthint">https://xss.rocks/scriptlet.html</string>
+
+    <string name="javascriptDesInsec1">برای جلوگیری از این حمله باید permission مربوط به javascript محدود باشد:</string>
+    <string name="javascriptDesInsec2">webSettings.setJavaScriptEnabled(true);</string>
+
+    <string name="javascriptDes">در اندروید برای بارگیری صفحات وب از webview استفاده می کنند. در استفاده از webview باید حداکثر دقت خود را به کار بگیریم تا مشکل امنیتی به وجود نیاید. در هر webview اگر permission مربوط به javascript را داشته باشد می تواند منجر به حمله ی xss شود.\n\n\n\n\n</string>
+
+    <string name="javascriptattacktv1">برای شروع حمله در این چالش باید مطمئن شویم که permission مربوط به به javascript محدود نباشد! همانطور که در تصویر زیر مشاهده می کنید permissions مربوطه محدود نیست.</string>
+    <string name="javascriptattacktv2">webviews می توانند فایل های javascript را بارگیری کنند.برای مثال در تصویر زیر یک نمونه از این بارگیری فایل javascript  را مشاهده می کنید:</string>
+
+
+    <string name="cleartext">ClearText</string>
+    <string name="cleartexthint">http://http-login.badssl.com/</string>
+
+    <string name="cleartextDesInsec1">برای جلوگیری از این حمله باید permission مربوط به cleartext محدود باشد:</string>
+    <string name="cleartextDesInsec2">android:usesCleartextTraffic="false"</string>
+
+    <string name="ssl">SSL</string>
+    <string name="sslhint">https://self-signed.badssl.com/</string>
+
+    <string name="jniDesSec">رمز ورود خود را وارد کنید:</string>
+
+
+    <string name="jnihardcode">Jni Hardcoding</string>
+
+    <string name="jnihardcodeDes">توسعه دهندگان اندروید برخی از string ها را در داخل کد اپلیکیشن hardcode میکنند. اگر این اطلاعات مهم و حساس باشند مهاجم به راحتی با decompile کردن کد میتواند به آنها دسترسی پیدا کند و از این مشکل امنیتی سواستفاده کند.\nاطلاعاتی که ممکن است توسط توسعه دهندگان اندروید hardcode شوند و منجر به مشکلات امنیتی شوند شامل پسوردها و access token و authentication string و … است.\n\n</string>
+
+    <string name="jnihardcodeDesInsec">برای جلوگیری از این حمله باید تا حد امکان از hardcode password جلوگیری کرد و از رمزنگاری استفاده کرد.</string>
+    <string name="jnihardcodeattacktv1">هدف  ما در این چالش پیدا کردن اطلاعات hardcode شده و کد آسیب پذیر است. در نگاه اول متوجه می شویم برای دسترسی باید رمز ورود را پیدا کنیم و فهمیدن رمز به طور منطقی امکان پذیر نیست! با وارد کردن هر رمز اشتباهی در Textbox برنامه خطا می دهد و اعلام می کند که دسترسی غیر مجاز است.\nبا بررسی کد JniHardcodingActivity (تصویر زیر) متوجه می شویم که در داخل کد یک object از VulJni class ساخته شده است.</string>
+    <string name="jnihardcodeattacktv2">سپس با بررسی VulJni (تصویر زیر) متوجه می شویم که یکسری native library به نام VulJni بارگیری شده است. این libraries همراه APK و در فولدر libs قرار دارند.</string>
+    <string name="jnihardcodeattacktv3">برای شروع حمله ابتدا برنامه را با کمک دستور زیر unpack می کنیم:</string>
+    <string name="jnihardcodeattacktv4">unzip wivaa.apk</string>
+    <string name="jnihardcodeattacktv5">سپس به فولدر libs رفته و دستور زیر را اجرا می کنیم:</string>
+    <string name="jnihardcodeattacktv6">ls *</string>
+    <string name="jnihardcodeattacktv7">همانطور که در تصویر بالا مشاهده می کنید لیستی از فایل های مختلف libvuljni.so وجود دارد. ابتدا به داخل یکی از این فولدرها رفته و سپس برای بررسی string های داخل فایل دستور زیر را اجرا می کنیم:</string>
+    <string name="jnihardcodeattacktv8">strings libVulJni.so</string>
+    <string name="jnihardcodeattacktv9">همانطور که در تصویر بالا مشاهده می کنید لیست مختلفی از strings نمایش داده شده است.در هنگام دقت به آنها دوتا از آنها توجه ما را جلب می کند. با امتحان کردن پسوردهای مختلف می توانیم به پسورد اصلی دسترسی پیدامی کنیم.همانطور که در تصویر زیر می بینید پسورد این چالش wivaahardcodepass است.</string>
+    <string name="jnibuffer">Jni Buffer</string>
+    <string name="jnibufferDes">در این چالش به یکی از مشکل های حافظه می پردازیم که منجر به حمله Dos می شود.\nحمله DOS زمانی اتفاق می افتد که کاربر بیشتر از مقدار در نظر گرفته شده برای حافظه استفاده می کند که منجر به خطا در برنامه می شود.\n\n\n\n\n\n</string>
+
+    <string name="adblogcat">adb logcat</string>
+
+
+    <string name="jnibufferattacktv1">هدف  ما در این چالش حمله Dos به کد موردنظراست.با بررسی کد JniBuffer (تصویر زیر) متوجه می شویم که در داخل کد یک object از VulJni class ساخته شده است.</string>
+    <string name="jnibufferattacktv2">سپس با بررسی VulJni (تصویر زیر) متوجه می شویم که حافظه مربوط به EditText ظرفیت مشخص دارد و در نتیجه اگر بیشتر از ظرفیت مشخص شده داده وارد کنیم برنامه نمی تواند داده موردنظر را بررسی کند و برنامه crash می کند.</string>
+
+    <string name="jnibufferDesInsec1">زبان برنامه نویسی c به کاربر امکان دسترسی مستقیم به حافظه را می دهد که اثرات مخربی دارد. برای برطرف کردن این مشکل لازم است به جای دستور strcpy داخل Vuljni.c از دستور زیر استفاده کنیم تا برنامه دیگر crash نکند.</string>
+    <string name="jnibufferDesInsec2">strncpy(code, pcode , sizeof(code) - 1);</string>
+
+
+    <string name="adb">ADB</string>
+
+    <string name="adbdes1">در این جا می خواهیم ابتدا در مورد ADB صحبت کنیم: \n ADB یک واسط بین سیستم عامل SANTOKU و شبیه ساز Genymotion است.با کمک این واسط می توان  اموری مانند انتقال داده، تصویربرداری از صفحه و اجرای دستورات shell را از طریق رایانه در گوشی انجام دهید.\n از آنجایی که با ADB آشنا شدید تعدادی از دستورات کاربردی آن را بررسی می کنیم:\nبرای شروع کار با ADB نیاز به اتصال  SANTOKU و Genymotion است که برای این منظور لازم است دستور زیر را در cmd سیستم عامل وارد کنیم:</string>
+    <string name="adbdes3">برای اینکه متوجه شویم چند سیستم از طریق adb متصل هستند از دستور زیر استفاده می کنیم:</string>
+    <string name="adbdevices">adb devices</string>
+    <string name="adbdes5">دستور بعدی که در زیر آمده shell را به اجرا در می آورد و امکان وارد کردن دستورات متعدد را به کاربر می دهد.</string>
+    <string name="adbdes7">دستور زیر اپلیکیشن اندروید داخل سیستم عامل را در دستگاه اندرویدی نصب می کند.</string>
+    <string name="adbinstall">adb install <b>[APP-NAME]</b></string>
+    <string name="adbdes9">دستور زیر فایل مورد نظر را از رایانه به دستگاه اندروید منتقل می کند.</string>
+    <string name="adbpush">adb push <b>[FILE-NAME] [DIRECTORY]</b></string>
+    <string name="adbdes11">دستور زیر فایل مورد نظر را از دستگاه اندروید به رایانه منتقل می کند.</string>
+    <string name="adbpull">Adb pull <b>[FILE-NAME]</b></string>
+    <string name="adbdes13">دستور زیر گزارشی از logs داخل سیستم را نشان می دهد که به منظور کشف و بررسی خطاهای موجود در اجرا کاربرد دارد.</string>
+
+
+    <string name="decompileandunzip"><![CDATA[Decompile & Unzip]]></string>
+
+    <string name="decompileandunzipdes1">در این قسمت می خواهیم در مورد unzip کردن اپلیکیشن صحبت کنیم:\n هر APK یک فایل فشرده از فایل های مختلف اپلیکیشن هست که با unzip کردن آن می توانیم فایل های مختلف مورد نظر خود را بازگردانیم اما باید توجه کنیم که مفهوم unzip کردن را با decompile کردن یکسان نگیریم.\nحال اگر به لیست فایل های unzip  شده دقت کنیم متوجه میشویم شامل یک فایل AndroidManifest.xml است که مجوزهای موردنیاز برنامه را دارد.یک فایل دیگربه نام classes.dex وجود دارد که با کمک آن می توان عملکرد برنامه را تحلیل کرد.\nهم چنین به یکسری فولدر res، lib و … نیز در کنار این فایل ها قرار دارد.\nبه طورکلی با وارد کردن دستور زیر در terminal می توان APK موردنظر را unzip کرد:</string>
+    <string name="unzipdird">Unzip -d <b>[DIRECTORY-NAME] [APK-NAME]</b></string>
+    <string name="decompileandunzipdes3">با وارد کردن دستور بالا یک دایرکتوری به نام dir name ایجاد می شود که شامل unzip شده APK موردنظر است. اما باید توجه کنیم که تمام فایل های موجود در این فولدر ناخوانا است و برای خوانا بودن این کدها لازم است که APK موردنظرمان را decompile کنیم.\nبرای decompile کردن در این قسمت ۲ روش بیان میشود :</string>
+    <string name="decompileandunzipdes4">1.apktool:</string>
+    <string name="decompileandunzipdes5">اولین متدی که بررسی می کنیم apktool است که به صورت پیش فرض در سیستم عامل santoku وجود دارد و می توان برای decompile کردن APK استفاده کرد.\nبرای این منظور ابتدا باید به محل قرارگیری APK در سیستم عامل رفت و دستور زیر را در ترمینال وارد کرد:</string>
+    <string name="apktoold">Apktool d <b>[APK-NAME]</b></string>
+    <string name="decompileandunzipdes7">اگر به لاگ هایی که در طول اجرای دستور میاید دقت کنیم متوجه decode کردن کد ها نی شویم.بعد از مدتی می توان فایل های decompile شده را مشاهده کرد.همانطور که قبلا در لیست فایل ها ذکر شد یکی از فایل ها AndroidManifest است که شامل permissions برنامه است که با باز کردن این فایل مجوزهای مختلف را میبینیم مثل خواندن از حافظه و ….\nاما باید به این نکته دقت کنیم که زبان کدهای موجود java نیستند و smali code هستند.</string>
+    <string name="decompileandunzipdes8">2.jadx</string>
+    <string name="decompileandunzipdes9">دومین متد ذکر شده jadx است که می توان از طریق سایت زیر آن را دانلود کرد:</string>
+    <string name="decompileandunzipdes10">https://github.com/skylot/jadx/releases</string>
+    <string name="decompileandunzipdes11">برای نصب آن می توان در ترمینال ازدستور زیر کمک گرفت :</string>
+    <string name="wgetlink">wget <b>[LINK]</b></string>
+    <string name="decompileandunzipdes13">در گام بعد لازم است که فایل دانلود شده را unzip کرد که برای این منظور از دستور زیر کمک می گیریم:</string>
+    <string name="unzupjadx">Unzip -d jadx <b>[ZIP-NAME]</b></string>
+    <string name="decompileandunzipdes15">فولدر jadx شامل یک directory به نام bin است که شامل فایل های مختلف اجرایی jadx است.برای استفاده از jadx لازم است که apk موردنظرمان را در فولدر Bin کپی کرده و از دستور زیر در ترمینال استفاده می کنیم:</string>
+    <string name="jadxdird">./jadx -d <b>[DIR-NAME] [APK-NAME]</b></string>
+    <string name="decompileandunzipdes17">بعد از اجرای این دستور مشاهده می کنیم که شروع به decompile کردن می کند و ممکن است با یک سری خطا روبرو شود که آنها را نادیده می گیریم.همانند روش قبلی به تمامی فایل ها دسترسی داریم و می توانیم محتویات آنها را به زبان java مشاهده کنیم.</string>
+
+
+    <string name="dex2jar">Dex2Jar</string>
+
+    <string name="dex2jardes1">روش دیگری که برای دسترسی به کد ها استفاده می کنیم و نیازی به decompile کردن ندارد روش dex2jar است.در این متد بدون نیاز به decompile کردن APK می توانیم به کدها با زبان java دسترسی داشته باشیم و آنها را تحلیل کنیم.در داخل سیستم عامل SANTOKU یک ابزار به نام Dex2jar وجود دارد که فایل های Dex را به jar تبدیل می کند. برای استفاده از این ابزار لازم است دستور زیر را در ترمینال وارد کنیم:</string>
+    <string name="dex2jardex">dex2jar <b>[DEX-FILE]</b></string>
+    <string name="dex2jardes3">در لاگ هایی که ثبت می شود می توانیم تبدیل dex به jar را مشاهده کنیم.در گام بعدی برای آنالیز کد java از دستور زیر استفاده می کنیم:</string>
+    <string name="dex2jardes4">Jd-gui <b>[JAR-FILE]</b></string>
+    <string name="dex2jardes5">در دستور بالا از فایل jar  استفاده می کنیم  و در نهایت به فایل های java موردنظر دسترسی پیدا می کنیم  و می توانیم آنها را تحلیل کنیم.</string>
+
+</resources>
