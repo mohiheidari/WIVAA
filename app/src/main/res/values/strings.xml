@@ -4,6 +4,7 @@
 
     <string name="category">Categories:</string>
 
+    <!--category-->
     <string name="cat0">REVERSE ENGINEERING</string>
     <string name="cat1">HARDCODING</string>
     <string name="cat2">INSECURE DATA STORAGE</string>
@@ -12,22 +13,72 @@
     <string name="cat5">BACKUP/DEBUG</string>
     <string name="cat6">C VULNERABILITIES</string>
 
+
+    <string name="des">توضیحات</string>
+    <string name="attack">حمله:</string>
+    <string name="des1">توضیحات:</string>
+
+
+    <!--REVERSE ENGINEERING-->
+    <string name="adb">ADB</string>
+
+    <string name="adbdes1">ADB یک واسط بین سیستم عامل SANTOKU و شبیه ساز Genymotion است. با کمک این واسط می‌توان اموری مانند انتقال داده، تصویربرداری از صفحه و اجرای دستورات shell را از طریق رایانه در گوشی انجام داد. \nبعد از تعریف ADB به بررسی یک سری از دستورات پرکاربرد در طی کار کردن با برنامه می‌پردازیم:\nبرای شروع کار با ADB نیاز به اتصال  SANTOKU و Genymotion است که برای این منظور لازم است دستور زیر در cmd سیستم عامل وارد شود:</string>
+    <string name="adbdes3">برای اینکه متوجه شوید چند سیستم از طریق adb متصل هستند باید از دستور زیر استفاده کنید:</string>
+    <string name="adbdevices">adb devices</string>
+    <string name="adbdes5">دستور بعدی که در زیر آمده shell را به اجرا در می آورد و امکان وارد کردن دستورات متعدد را به کاربر می دهد.</string>
+    <string name="adbdes7">دستور زیر اپلیکیشن اندروید داخل سیستم عامل را در دستگاه اندرویدی نصب می کند.</string>
+    <string name="adbinstall">adb install <b>[APP-NAME]</b></string>
+    <string name="adbdes9">دستور زیر فایل مورد نظر را از رایانه به دستگاه اندروید منتقل می کند.</string>
+    <string name="adbpush">adb push <b>[FILE-NAME] [DIRECTORY]</b></string>
+    <string name="adbdes11">دستور زیر فایل مورد نظر را از دستگاه اندروید به رایانه منتقل می کند.</string>
+    <string name="adbpull">Adb pull <b>[FILE-NAME]</b></string>
+    <string name="adbdes13">دستور زیر گزارشی از logs داخل سیستم را نشان می دهد که به منظور کشف و بررسی خطاهای موجود در اجرا کاربرد دارد.</string>
+
+
+    <string name="decompileandunzip"><![CDATA[Decompile & Unzip]]></string>
+
+    <string name="decompileandunzipdes1">هر APK یک فایل‌فشرده از فایل‌های مختلف اپلیکیشن هست که با unzip کردن آن می توانید فایل‌های مختلف مورد‌نظر خود را بازگردانید اما باید توجه کنید که مفهوم unzip کردن را با decompile کردن یکسان نگیرید.\nحال اگر به لیست فایل های unzip  شده دقت کنید متوجه می شوید که شامل :\n۱)یک فایل AndroidManifest.xml که permissions موردنیاز برنامه را دارد.\n۲)یک فایل classes.dex که با کمک آن می توان عملکرد برنامه را تحلیل کرد.\n۳)هم چنین به یکسری فولدر res، lib و … نیز در کنار این فایل ها قرار دارد.\nبه طورکلی با وارد کردن دستور زیر در terminal می‌توان APK موردنظر را unzip کرد:</string>
+    <string name="unzipdird">Unzip -d <b>[DIRECTORY-NAME] [APK-NAME]</b></string>
+    <string name="decompileandunzipdes3">با وارد کردن دستور بالا یک دایرکتوری به نام dir name ایجاد می شود که شامل فایل‌های unzip شده APK موردنظر است. اما باید توجه کنید که تمام فایل های موجود در این فولدر ناخوانا است و برای خوانا بودن این کدها لازم است که APK موردنظرمان را decompile کنید.\nبرای decompile کردن در این قسمت ۲ روش بیان میشود :</string>
+    <string name="decompileandunzipdes4">1.apktool:</string>
+    <string name="decompileandunzipdes5">اولین متدی که بررسی می شود apktool است که به صورت پیش فرض در سیستم عامل santoku وجود دارد و می توان برای decompile کردن APK استفاده کرد.\nبرای این منظور ابتدا باید به محل قرارگیری APK در سیستم عامل رفت و دستور زیر را در ترمینال وارد کرد.</string>
+    <string name="apktoold">Apktool d <b>[APK-NAME]</b></string>
+    <string name="decompileandunzipdes7">اگر به لاگ‌هایی که در طول اجرای دستور ظاهر می‌شود دقت کنید متوجه decode کردن کد ها می‌شوید. بعد از مدتی می توان فایل های decompile شده را مشاهده کرد.همانطور که قبلا در لیست فایل ها ذکر شد یکی از فایل ها AndroidManifest است که شامل مجوز‌های‌ برنامه است که با باز کردن این فایل مجوزهای مختلفی را مثل خواندن از حافظه و …. مشاهده می‌کنید.\nاما باید به این نکته دقت کنید که زبان کدهای موجود java نیستند و smali code هستند.</string>
+    <string name="decompileandunzipdes8">2.jadx</string>
+    <string name="decompileandunzipdes9">دومین متد ذکر شده jadx است که می توان از طریق سایت زیر آن را دانلود کرد:</string>
+    <string name="decompileandunzipdes10">https://github.com/skylot/jadx/releases</string>
+    <string name="decompileandunzipdes11">برای نصب آن می توان در ترمینال ازدستور زیر کمک گرفت :</string>
+    <string name="wgetlink">wget <b>[LINK]</b></string>
+    <string name="decompileandunzipdes13">در گام بعد لازم است که فایل دانلود شده را unzip کرد که برای این منظور می‌توانید از دستور زیر کمک بگیرید:</string>
+    <string name="unzupjadx">Unzip -d jadx <b>[ZIP-NAME]</b></string>
+    <string name="decompileandunzipdes15">فولدر jadx شامل یک directory به نام bin است که شامل فایل های مختلف اجرایی jadx است.برای استفاده از jadx لازم است که apk را در فولدر Bin کپی کرده و از دستور زیر در ترمینال استفاده کرد:</string>
+    <string name="jadxdird">./jadx -d <b>[DIR-NAME] [APK-NAME]</b></string>
+    <string name="decompileandunzipdes17">بعد از اجرای این دستور مشاهده می کنید که شروع به decompile کردن می کند.همانند روش قبلی به تمامی فایل‌ها دسترسی دارید اما با این تفاوت که به زبان JAVA  هستند.</string>
+
+
+    <string name="dex2jar">Dex2Jar</string>
+
+    <string name="dex2jardes1">روش دیگری که برای دسترسی به کد ها استفاده می شود و دیگر نیازی به decompile کردن ندارد روش dex2jar است. در این متد بدون نیاز به decompile کردن APK می توانید به کدها با زبان java دسترسی داشته باشید و آنها را تحلیل کنید.در داخل سیستم عامل SANTOKU یک ابزار به نام Dex2jar وجود دارد که فایل های Dex را به jar تبدیل می کند. برای استفاده از این ابزار لازم است دستور زیر را در ترمینال وارد کنید:</string>
+    <string name="dex2jardex">dex2jar <b>[DEX-FILE]</b></string>
+    <string name="dex2jardes3">در لاگ هایی که ثبت می شود می توانید تبدیل dex به jar را مشاهده کنید.در گام بعدی برای آنالیز کد java از دستور زیر استفاده کنید:</string>
+    <string name="dex2jardes4">Jd-gui <b>[JAR-FILE]</b></string>
+    <string name="dex2jardes5">در نهایت با وارد کردن دستور بالا به فایل‌های java دسترسی پیدا می‌کنید و می‌توانید آنها را تحلیل کنید. </string>
+
+
     <!--HARDCODING-->
+
     <string name="hardcode">Hardcoding Issue</string>
     <string name="hardcodeDesSec">رمز ورود خود را وارد کنید:</string>
     <string name="pass">رمز ورود</string>
     <string name="access">ورود</string>
-    <string name="des">توضیحات</string>
 
-    <string name="hcDesInsec">هیچ روشی برای جلوگیری از این تهدید وجود ندارد و توسعه دهندگان تا حد ممکن باید از استفاده مستقیم stringها در کد جلوگیری کنند!</string>
+    <string name="hcDesInsec">هیچ روشی برای جلوگیری از این تهدید وجود ندارد و توسعه‌دهندگان تا حد ممکن باید از استفاده مستقیم رشته‌ها در کد جلوگیری کنند!</string>
 
-    <string name="des1">توضیحات:</string>
-    <string name="hcDes">در این چالش یکی از مشکلات امنیتی اندروید به نام Hardcoding را بررسی میکنیم:\nتوسعه دهندگان اندروید برخی از string ها را در داخل کد اپلیکیشن hardcode میکنند. اگر این اطلاعات مهم و حساس باشند مهاجم به راحتی با decompile کردن کد میتواند به آنها دسترسی پیدا کند و از این مشکل امنیتی سواستفاده کند.\nاطلاعاتی که ممکن است توسط توسعه دهندگان اندروید hardcode شوند و منجر به مشکلات امنیتی شوند شامل پسوردها و access token و authentication string و … است.\n\n\n\n\n</string>
+    <string name="hcDes">در این چالش یکی از مشکلات امنیتی اندروید به نام Hardcoding بررسی می‌شود:\nتوسعه دهندگان اندروید برخی از رشته‌ها را در داخل کد اپلیکیشن hardcode میکنند. اگر این اطلاعات مهم و حساس باشند مهاجم به راحتی با decompile کردن کد میتواند به آنها دسترسی پیدا کند و از این مشکل امنیتی سواستفاده کند.\nاطلاعاتی که ممکن است توسط توسعه دهندگان اندروید hardcode و منجر به مشکلات امنیتی شوند شامل پسوردها، access token و authentication string و … است.\n\n\n\n</string>
 
-    <string name="attack">حمله:</string>
-    <string name="hcattackdes1">هدف  ما در این چالش پیدا کردن اطلاعات hardcode شده و کد آسیب پذیر است. در نگاه اول متوجه می شویم برای دسترسی باید رمز ورود را پیدا کنیم و فهمیدن رمز به طور منطقی امکان پذیر نیست! با وارد کردن هر رمز اشتباهی در Textbox برنامه خطا می دهد و اعلام می کند که دسترسی غیر مجاز است.</string>
-    <string name="hcatttackdes2">برای پیدا کردن اطلاعات hardcode شده و فهمیدن اینکه در این کلاس چه میگذرد کد جاوا مربوط به آن را بررسی می کنیم:</string>
-    <string name="hcatttackdes3">همانطور که در تصویر بالا می بینید متوجه می شویم برای داشتن دسترسی باید <b>رمز عبور ناحیه کاربری</b> را در Textbox وارد کنیم.</string>
+    <string name="hcattackdes1">هدف در این چالش پیدا کردن اطلاعات hardcode شده و کد آسیب پذیر است. در نگاه اول متوجه می شوید برای دسترسی باید رمز ورود را پیدا کنید و فهمیدن رمز به طور شانسی امکان پذیر نیست! با وارد کردن هر رمز اشتباهی در Textbox برنامه خطا می دهد و اعلام می کند که دسترسی غیر مجاز است.</string>
+    <string name="hcatttackdes2">برای پیدا کردن اطلاعات hardcode شده و فهمیدن اینکه در این کلاس چه میگذرد ابتدا باید به بررسی کلاس HardcodingActivity ‌بپردازید:</string>
+    <string name="hcatttackdes3">همانطور که در تصویر بالا میبینید متوجه می‌شوید برای داشتن دسترسی باید <b>رمز عبور ناحیه کاربری</b> را در Textbox وارد کنید.</string>
 
     <!--INSECURE DATA STORAGE-->
     <!--Insecure Logging-->
@@ -39,15 +90,15 @@
     <string name="loggingDesInsec">برای حذف کلاس Log در زمان build باید کد زیر را در فایل Proguard اضافه کرد:</string>
     <string name="loggingDesInsec2">-assumenosideeffects class android.util.Log{*;}</string>
 
-    <string name="loggingDes">در این چالش  می خواهیم اطلاعات حساس در log را پیدا کنیم.\nتوسعه دهندگان اندروید از log گرفتن به منظور trace کردن کد و پیدا کردن error و warningها استفاده می کنند.\nتوسعه دهندگان اندروید بعضی از اوقات اطلاعات حساسی را در logها ذخیره می کنند که منجر به دسترسی سایر برنامه ها و دزدی اطلاعات حساس می شود.\n\n\n\n\n\n\n\n\n</string>
+    <string name="loggingDes">در این چالش اطلاعات حساس در log را بررسی می‌کنید.توسعه دهندگان اندروید از log گرفتن برای برای trace کردن کد و پیدا کردن error و warning ها استفاده می کنند. توسعه دهندگان اندروید بعضی از اوقات اطلاعات حساسی را در log ها ذخیره می کنند که منجر به دسترسی سایر برنامه ها و دزدی اطلاعات حساس می شود.\n\n\n\n\n\n</string>
 
-    <string name="loggingattackdes1">در گام اول کد مربوط به این چالش را بررسی می کنیم :</string>
-    <string name="loggingattackdes2">همانطور که در تصویر بالا مشخص شده است هر شماره کارتی که داخل EditText وارد شود در داخل log نیز می آید.برای شروع این حمله ابتدا یک شماره کارت در داخل EditText وارد می کنیم:</string>
-    <string name="loggingattackdes3">برای دسترسی به logهای سیستم ابتدا دستگاه را با دستور زیر به adb متصل میکنیم:</string>
+    <string name="loggingattackdes1">در گام اول نیاز است کد مربوط به این چالش را بررسی کنید :</string>
+    <string name="loggingattackdes2">همانطور که در تصویر بالا مشخص شده است هر شماره کارتی که داخل EditText وارد شود در داخل log نیز می آید.برای شروع این حمله ابتدا یک شماره کارت در داخل EditText وارد کنید:</string>
+    <string name="loggingattackdes3">برای دسترسی به log های سیستم ابتدا دستگاه را با کمک دستور زیربه adb متصل کنید:</string>
     <string name="adbconnect">adb connect <b>[IP-OF-GENYMOTION]</b></string>
-    <string name="loggingattackdes5">سپس دستور زیر را برای دسترسی به logها در cmd وارد می کنیم:</string>
+    <string name="loggingattackdes5">سپس دستور زیر را برای دسترسی به log ها در cmd وارد کنید:</string>
     <string name="loggingattackdes6">adb logcat</string>
-    <string name="loggingattackdes7"> شماره کارتی را که در Textbox وارد کردیم را در logs مشاهده می کنیم.</string>
+    <string name="loggingattackdes7">اکنون به قسمت کد این بخش بروید همانطورکه در تصویر زیر مشاهده می‌کنید شماره کارت‌ واردشده در Logs نمایان شده است.</string>
 
     <!--Shared Pref-->
     <string name="sharedpref">Shared Preferences</string>
@@ -56,52 +107,52 @@
 
     <string name="sharedDes">ذخیره داده های مهمی همانند رمز عبور و شماره کارت اعتباری و … به یک رویکرد امن نیاز دارد.\nتوسعه دهندگان اندروید برای ذخیره داده ها از shared Preferences، DataBase ،Temporary File ،External Storage و … استفاده می کنند.\nاز آنجایی که اگر برنامه های دیگر دسترسی Root به موبایل داشته باشند به تمامی این اطلاعات دسترسی پیدا می کنند باید این اطلاعات رمزنگاری شوند.\n\n\n\n</string>
 
-    <string name="sharedattackdes1">برای درک بهتر کد با jd-gui برنامه را مهندسی معکوس می کنیم:</string>
-    <string name="sharedattackdes2">همانطور که در تصویر بالا می بینید برنامه برای ذخیره داده ها از SharedPreferences استفاده می کند.\nابتدا فیلد های نام کاربری و رمز عبور را پر می کنیم:</string>
-    <string name="sharedattackdes3"> سپس دستگاه را به adb متصل میکنیم:</string>
-    <string name="sharedattackdes5">برای شروع حمله ابتدا لازم است به shellبرویم که برای این منظور از دستور زیر استفاده می کنیم:</string>
-    <string name="sharedattackdes7"> سپس به مسیری که فایل در آن قرار دارد می رویم:</string>
+    <string name="sharedattackdes1">برای درک بهتر ابتدا لازم است کد مربوط به این بخش را بررسی کنید:</string>
+    <string name="sharedattackdes2">همانطور که در تصویر بالا میبینید برنامه برای ذخیره داده ها از SharedPreferences استفاده می کند.\nابتدا فیلد های نام کاربری و رمز عبور را پر کنید:</string>
+    <string name="sharedattackdes3"> سپس دستگاه را به adb متصل کنید:</string>
+    <string name="sharedattackdes5">برای شروع حمله ابتدا باید به shell بروید که برای این منظور لازم است از دستور زیر استفاده کنید:</string>
+    <string name="sharedattackdes7">سپس به مسیری که فایل در آن قرار دارد بروید:</string>
     <string name="sharedattackdes8">cd /data/data/<b>[APP-NAME]</b>/shared_prefs/<b>[XML-NAME]</b></string>
-    <string name="sharedattackdes9">همانطور که در تصویر زیر مشاهده می کنید اطلاعاتی را که در EditText وارد کرده ایم در فایل ذخیره شده است.</string>
+    <string name="sharedattackdes9">همانطور که در تصویر زیر مشاهده می کنید اطلاعاتی را که در EditText وارد شده‌است در فایل نیز ذخیره شده‌است.</string>
 
-    <string name="sharedDesInsec">برای جلوگیری از این حمله باید از الگوریتم های رمزنگاری MD5 یا SHA1 بیش از 10 بار استفاده کرد .همچنین برای امنیت بیشتر از تکنیک های رمزنگاری و کلید استفاده کرد.</string>
+    <string name="sharedDesInsec">برای جلوگیری از این حمله باید بیش از 10 بار از الگوریتم های رمزنگاری MD5 یا SHA1 استفاده کرد. همچنین برای امنیت بیشتر می‌توان از تکنیک های رمزنگاری با کلید استفاده کرد.</string>
 
     <!--txt-->
     <string name="txt">External Storage</string>
 
-    <string name="txtDesInsec">برای جلوگیری از این حمله باید از الگوریتم های رمزنگاری MD5 یا SHA1 بیش از 10 بار استفاده کرد .همچنین برای امنیت بیشتر از تکنیک های رمزنگاری و کلید استفاده کرد.</string>
+    <string name="txtDesInsec">برای جلوگیری از این حمله باید بیش از 10 بار از الگوریتم های رمزنگاری MD5 یا SHA1 استفاده کرد. همچنین برای امنیت بیشتر می‌توان از تکنیک های رمزنگاری با کلید استفاده کرد.</string>
 
     <string name="txtDes">ذخیره داده های مهمی همانند رمز عبور و شماره کارت اعتباری و … به یک رویکرد امن نیاز دارد.\nتوسعه دهندگان اندروید برای ذخیره داده ها از shared Preferences، DataBase ،Temporary File ،External Storage و … استفاده می کنند. از آنجایی که اگر برنامه های دیگر دسترسی Root به موبایل داشته باشند به تمامی این اطلاعات دسترسی پیدا می کنند باید این اطلاعات رمزنگاری شوند.\nدر API اندروید External Storage به عنوان SD card یا بخشی از internal storage شناخته می شود.\nنکته حائز اهمیت این است که هر برنامه ای با permission دسترسی خواندن External Storage می تواند به اطلاعات دسترسی داشته باشد و از آنها سوءاستفاده کند.</string>
 
-    <string name="txtattackdes1">با بررسی کد مربوط به این بخش ( در تصویر زیر آمده است!) متوجه می شویم که همه ی اطلاعات در داخل فایل uinfo.txt. ذخیره می شود .</string>
-    <string name="txtattackdes2">ابتدا فیلد های نام کاربری و رمز عبور را پر می کنیم:</string>
-    <string name="txtattackdes3">سپس دستگاه را به adb متصل میکنیم:</string>
-    <string name="txtattackdes5">برای دسترسی به این فایل لازم است که ابتدا وارد shell شده و سپس از دستور زیر استفاده کنیم تا به داخل دایرکتوری sdcard برویم:</string>
+    <string name="txtattackdes1">با بررسی کد مربوط به این بخش که در تصویر زیر آمده است متوجه می‌شوید که همه‌ی اطلاعات در داخل فایل .uinfo.txt ذخیره می‌شود.</string>
+    <string name="txtattackdes2">ابتدا فیلد های نام کاربری و رمز عبور را پر کنید:</string>
+    <string name="txtattackdes3"> سپس دستگاه را به adb متصل کنید:</string>
+    <string name="txtattackdes5">برای دسترسی به این فایل لازم است که ابتدا وارد shell شده و سپس از دستور زیر استفاده کنید تا به داخل دایرکتوری sdcard بروید:</string>
     <string name="txtattackdes6">cd /mnt/sdcard</string>
-    <string name="txtattackdes7">سپس همانند تصویر زیر یک لیست از فایل های موجود در این دایرکتوری می گیریم:</string>
-    <string name="txtattackdes8">اما متاسفانه فایل مورد نظر خود را پیدا نمی کنیم!دلی این موضوع این است که دایرکتوری با ( . ) شروع می شود و به طور پیش فرض دستور بالا آن را نادیده می گیرد! می توانیم برای اینکه این مسئله پیش نیاید از دستور زیر استفاده کنیم:</string>
+    <string name="txtattackdes7">سپس همانند تصویر زیر یک لیست از فایل های موجود در این دایرکتوری بگیرید:</string>
+    <string name="txtattackdes8">اما متاسفانه فایل مورد نظر خود را پیدا نمی کنید!دلیل این موضوع این است که دایرکتوری با ( . ) شروع می شود و به طور پیش فرض دستور بالا آن را نادیده می گیرد! می توانید برای اینکه این مسئله پیش نیاید از دستور زیر استفاده کنید:</string>
     <string name="txtattackdes9">ls -l .uinfo.txt</string>
-    <string name="txtattackdes10">و در نهایت با cat فایل مورد نظرمان را مشاهده می کنیم!</string>
+    <string name="txtattackdes10">و در نهایت با cat فایل مورد‌نظر را مشاهده کنید!</string>
 
     <!--tmp-->
     <string name="tmp">Temporary File</string>
 
-    <string name="tmpDesInsec">برای جلوگیری از این حمله باید از الگوریتم های رمزنگاری MD5 یا SHA1 بیش از 10 بار استفاده کرد .همچنین برای امنیت بیشتر از تکنیک های رمزنگاری با کلید استفاده کرد.</string>
+    <string name="tmpDesInsec">برای جلوگیری از این حمله باید بیش از 10 بار از الگوریتم های رمزنگاری MD5 یا SHA1 استفاده کرد. همچنین برای امنیت بیشتر می‌توان از تکنیک های رمزنگاری با کلید استفاده کرد.</string>
 
     <string name="tmpDes">ذخیره داده های مهمی همانند رمز عبور و شماره کارت اعتباری و … به یک رویکرد امن نیاز دارد.\nتوسعه دهندگان اندروید برای ذخیره داده ها از shared Preferences، DataBase ،Temporary File ،External Storage و … استفاده می کنند. از آنجایی که اگر برنامه های دیگر دسترسی Root به موبایل داشته باشند به تمامی این اطلاعات دسترسی پیدا می کنند باید این اطلاعات رمزنگاری شوند.\n\n\n\n\n\n\n</string>
 
-    <string name="tmpattackdes1">با بررسی کد مربوط به این بخش ( در تصویر زیر آمده است!) متوجه می شویم برای ذخیره اطلاعات از Temporary file استفاده می شود.</string>
-    <string name="tmpattackdes2">ابتدا فیلد های نام کاربری و رمز عبور را پر می کنیم:</string>
-    <string name="tmpattackdes3">سپس دستگاه را به adb متصل میکنیم:</string>
-    <string name="tmpattackdes5">برای دسترسی به اطلاعات لازم است که ابتدا وارد shell شده و سپس از دستور زیر استفاده کنیم تا به داخل دایرکتوری package برویم:</string>
+    <string name="tmpattackdes1">با بررسی کد مربوط به این بخش که در تصویر زیر آمده است متوجه می‌شوید که این چالش برای ذخیره اطلاعات از Temporary file استفاده کرده است.</string>
+    <string name="tmpattackdes2">ابتدا فیلد های نام کاربری و رمز عبور را پر کنید:</string>
+    <string name="tmpattackdes3"> سپس دستگاه را به adb متصل کنید:</string>
+    <string name="tmpattackdes5">برای دسترسی به اطلاعات لازم است که ابتدا وارد shell شده و سپس از دستور زیر استفاده کنید تا به داخل دایرکتوری package بروید:</string>
     <string name="dirpackage">cd data/data/<b>[PACKAGE-NAME]</b></string>
-    <string name="tmpattackdes7">سپس همانند تصویر پایین با دستور ls لیستی از فایل های موجود در دایرکتوری را می فهمیم:</string>
-    <string name="tmpattackdes8">اگر به تصویر بالا نگاه کنید متوجه فایل tmp می شوید.در نهایت با دستور cat می توان محتوای فایل را مشاهده کرد.</string>
+    <string name="tmpattackdes7">سپس همانند تصویر پایین با دستور ls لیستی از فایل های موجود در دایرکتوری را متوجه می‌شوید:</string>
+    <string name="tmpattackdes8">اگر به تصویر بالا نگاه کنید متوجه فایل tmp می شوید. در نهایت با دستور cat می توان محتوای فایل را مشاهده کرد.</string>
 
     <!--DB-->
     <string name="db">DataBase</string>
 
-    <string name="dbDesInsec">برای جلوگیری از این حمله باید از الگوریتم های رمزنگاری MD5 یا SHA1 بیش از 10 بار استفاده کرد .همچنین برای امنیت بیشتر از تکنیک های رمزنگاری با کلید استفاده کرد.</string>
+    <string name="dbDesInsec">برای جلوگیری از این حمله باید بیش از 10 بار از الگوریتم های رمزنگاری MD5 یا SHA1 استفاده کرد. همچنین برای امنیت بیشتر می‌توان از تکنیک های رمزنگاری با کلید استفاده کرد.</string>
 
     <string name="dbDes">ذخیره داده های مهمی همانند رمز عبور و شماره کارت اعتباری و … به یک رویکرد امن نیاز دارد.\nتوسعه دهندگان اندروید برای ذخیره داده ها از shared Preferences، DataBase ،Temporary File ،External Storage و … استفاده می کنند. از آنجایی که اگر برنامه های دیگر دسترسی Root به موبایل داشته باشند به تمامی این اطلاعات دسترسی پیدا می کنند باید این اطلاعات رمزنگاری شوند.\n\n\n\n\n\n\n</string>
 
@@ -121,7 +172,7 @@
 1)برنامه باید یکسری permission برای component مشترک بین برنامه ها تعریف کند.\n
 2)هیچ کدام از component مشترک نباید اطلاعات مهمی را فاش کند.\n
 3)نباید Component های مشترک امنیت کاربر را تهدید کند.</string>
-    <string name="accessDes">اندروید ساختار پیچیده ای دارد و روی Linux kernel، ماشین مجازی Dalvik و موارد دیگر ساخته شده است اما چهار مولفه اصلی دارد:\n1)Activities:\nیک صفحه نمایش متمرکز واحد که کاربر با آن می تواند ارتباط برقرار کند.\n2)Content Provider:\nمدیریت دسترسی به مخزن اطلاعات تولید شده توسط اپلیکیشن.\n3)Broadcast Receiver:\nاپلیکیشن ها می توانند یک سری پیام را به همدیگر برسانند گه به این فرایند Broadcast می گویند.\n4)Services:\nمولفه ای برای انجام عملیات در پیش زمینه مانند پخش موسیقی، ارتباط با content provider ها و ... . \nبخش های مختلف یک اپلیکیشن نباید توسط سایر اپلیکیشن ها در دسترس باشد. در بعضی از موارد اپلیکیشن می تواند برخی از منابع خود را با سایر برنامه ها تقسیم کند.برای مثال  با فرستادن یک Intent </string>
+    <string name="accessDes">اندروید ساختار پیچیده ای دارد و روی Linux kernel، ماشین مجازی Dalvik و موارد دیگر ساخته شده است اما چهار مولفه اصلی دارد:\n1)Activities:\nیک صفحه نمایش متمرکز واحد که کاربر با آن می تواند ارتباط برقرار کند.\n2)Content Provider:\nمدیریت دسترسی به مخزن اطلاعات تولید شده توسط اپلیکیشن را برعهده دارد.\n3)Broadcast Receiver:\nاپلیکیشن ها می توانند یک سری پیام را به همدیگر برسانند که به این فرایند Broadcast می گویند.\n4)Services:\nمولفه ای برای انجام عملیات در پیش زمینه مانند پخش موسیقی، ارتباط با content provider ها و ... . \nبخش های مختلف یک اپلیکیشن نباید توسط سایر اپلیکیشن ها در دسترس باشد. در بعضی از موارد اپلیکیشن می تواند برخی از منابع خود را با سایر برنامه ها تقسیم کند.برای مثال  با فرستادن یک Intent </string>
 
     <string name="intentp1attacktv1">با کلیک بر روی کلید مشاهده اطلاعات می توانید اطلاعات مربوط به کارت بانکی کاربر را مشاهده کنید .\n در این فعالیت قصد داریم که بدون کلیک بر روی کلید اطلاعات کارت بانکی را مشاهده کنیم.\n با بررسی کد مربوط به این بخش ( در تصویر زیر آمده است!) متوجه می شویم Intent ذکر شده در Intentp1Activity در داخل Manifest متعلق به APICredsActivity است. </string>
     <string name="intentp1attacktv2">باید به این نکته توجه کنیم که Intent Filter نباید به عنوان یک مکانیزم امنیتی استفاده شود زیرا activity موردنظر قابل دسترس برای سایر اپلیکیشن ها می شود.\nبرای شروع حمله ابتدا دستگاه را به adb متصل میکنیم:</string>
@@ -266,7 +317,7 @@
 
 
     <string name="cleartext">ClearText</string>
-    <string name="cleartexthint">http://http-login.badssl.com/</string>
+    <string name="cleartexthint">http://www.stealmylogin.com/demo.html</string>
 
     <string name="cleartextDesInsec1">برای جلوگیری از این حمله باید permission مربوط به cleartext محدود باشد:</string>
     <string name="cleartextDesInsec2">android:usesCleartextTraffic="false"</string>
@@ -302,50 +353,4 @@
 
     <string name="jnibufferDesInsec1">زبان برنامه نویسی c به کاربر امکان دسترسی مستقیم به حافظه را می دهد که اثرات مخربی دارد. برای برطرف کردن این مشکل لازم است به جای دستور strcpy داخل Vuljni.c از دستور زیر استفاده کنیم تا برنامه دیگر crash نکند.</string>
     <string name="jnibufferDesInsec2">strncpy(code, pcode , sizeof(code) - 1);</string>
-
-
-    <string name="adb">ADB</string>
-
-    <string name="adbdes1">در این جا می خواهیم ابتدا در مورد ADB صحبت کنیم: \n ADB یک واسط بین سیستم عامل SANTOKU و شبیه ساز Genymotion است.با کمک این واسط می توان  اموری مانند انتقال داده، تصویربرداری از صفحه و اجرای دستورات shell را از طریق رایانه در گوشی انجام دهید.\n از آنجایی که با ADB آشنا شدید تعدادی از دستورات کاربردی آن را بررسی می کنیم:\nبرای شروع کار با ADB نیاز به اتصال  SANTOKU و Genymotion است که برای این منظور لازم است دستور زیر را در cmd سیستم عامل وارد کنیم:</string>
-    <string name="adbdes3">برای اینکه متوجه شویم چند سیستم از طریق adb متصل هستند از دستور زیر استفاده می کنیم:</string>
-    <string name="adbdevices">adb devices</string>
-    <string name="adbdes5">دستور بعدی که در زیر آمده shell را به اجرا در می آورد و امکان وارد کردن دستورات متعدد را به کاربر می دهد.</string>
-    <string name="adbdes7">دستور زیر اپلیکیشن اندروید داخل سیستم عامل را در دستگاه اندرویدی نصب می کند.</string>
-    <string name="adbinstall">adb install <b>[APP-NAME]</b></string>
-    <string name="adbdes9">دستور زیر فایل مورد نظر را از رایانه به دستگاه اندروید منتقل می کند.</string>
-    <string name="adbpush">adb push <b>[FILE-NAME] [DIRECTORY]</b></string>
-    <string name="adbdes11">دستور زیر فایل مورد نظر را از دستگاه اندروید به رایانه منتقل می کند.</string>
-    <string name="adbpull">Adb pull <b>[FILE-NAME]</b></string>
-    <string name="adbdes13">دستور زیر گزارشی از logs داخل سیستم را نشان می دهد که به منظور کشف و بررسی خطاهای موجود در اجرا کاربرد دارد.</string>
-
-
-    <string name="decompileandunzip"><![CDATA[Decompile & Unzip]]></string>
-
-    <string name="decompileandunzipdes1">در این قسمت می خواهیم در مورد unzip کردن اپلیکیشن صحبت کنیم:\n هر APK یک فایل فشرده از فایل های مختلف اپلیکیشن هست که با unzip کردن آن می توانیم فایل های مختلف مورد نظر خود را بازگردانیم اما باید توجه کنیم که مفهوم unzip کردن را با decompile کردن یکسان نگیریم.\nحال اگر به لیست فایل های unzip  شده دقت کنیم متوجه میشویم شامل یک فایل AndroidManifest.xml است که مجوزهای موردنیاز برنامه را دارد.یک فایل دیگربه نام classes.dex وجود دارد که با کمک آن می توان عملکرد برنامه را تحلیل کرد.\nهم چنین به یکسری فولدر res، lib و … نیز در کنار این فایل ها قرار دارد.\nبه طورکلی با وارد کردن دستور زیر در terminal می توان APK موردنظر را unzip کرد:</string>
-    <string name="unzipdird">Unzip -d <b>[DIRECTORY-NAME] [APK-NAME]</b></string>
-    <string name="decompileandunzipdes3">با وارد کردن دستور بالا یک دایرکتوری به نام dir name ایجاد می شود که شامل unzip شده APK موردنظر است. اما باید توجه کنیم که تمام فایل های موجود در این فولدر ناخوانا است و برای خوانا بودن این کدها لازم است که APK موردنظرمان را decompile کنیم.\nبرای decompile کردن در این قسمت ۲ روش بیان میشود :</string>
-    <string name="decompileandunzipdes4">1.apktool:</string>
-    <string name="decompileandunzipdes5">اولین متدی که بررسی می کنیم apktool است که به صورت پیش فرض در سیستم عامل santoku وجود دارد و می توان برای decompile کردن APK استفاده کرد.\nبرای این منظور ابتدا باید به محل قرارگیری APK در سیستم عامل رفت و دستور زیر را در ترمینال وارد کرد:</string>
-    <string name="apktoold">Apktool d <b>[APK-NAME]</b></string>
-    <string name="decompileandunzipdes7">اگر به لاگ هایی که در طول اجرای دستور میاید دقت کنیم متوجه decode کردن کد ها نی شویم.بعد از مدتی می توان فایل های decompile شده را مشاهده کرد.همانطور که قبلا در لیست فایل ها ذکر شد یکی از فایل ها AndroidManifest است که شامل permissions برنامه است که با باز کردن این فایل مجوزهای مختلف را میبینیم مثل خواندن از حافظه و ….\nاما باید به این نکته دقت کنیم که زبان کدهای موجود java نیستند و smali code هستند.</string>
-    <string name="decompileandunzipdes8">2.jadx</string>
-    <string name="decompileandunzipdes9">دومین متد ذکر شده jadx است که می توان از طریق سایت زیر آن را دانلود کرد:</string>
-    <string name="decompileandunzipdes10">https://github.com/skylot/jadx/releases</string>
-    <string name="decompileandunzipdes11">برای نصب آن می توان در ترمینال ازدستور زیر کمک گرفت :</string>
-    <string name="wgetlink">wget <b>[LINK]</b></string>
-    <string name="decompileandunzipdes13">در گام بعد لازم است که فایل دانلود شده را unzip کرد که برای این منظور از دستور زیر کمک می گیریم:</string>
-    <string name="unzupjadx">Unzip -d jadx <b>[ZIP-NAME]</b></string>
-    <string name="decompileandunzipdes15">فولدر jadx شامل یک directory به نام bin است که شامل فایل های مختلف اجرایی jadx است.برای استفاده از jadx لازم است که apk موردنظرمان را در فولدر Bin کپی کرده و از دستور زیر در ترمینال استفاده می کنیم:</string>
-    <string name="jadxdird">./jadx -d <b>[DIR-NAME] [APK-NAME]</b></string>
-    <string name="decompileandunzipdes17">بعد از اجرای این دستور مشاهده می کنیم که شروع به decompile کردن می کند و ممکن است با یک سری خطا روبرو شود که آنها را نادیده می گیریم.همانند روش قبلی به تمامی فایل ها دسترسی داریم و می توانیم محتویات آنها را به زبان java مشاهده کنیم.</string>
-
-
-    <string name="dex2jar">Dex2Jar</string>
-
-    <string name="dex2jardes1">روش دیگری که برای دسترسی به کد ها استفاده می کنیم و نیازی به decompile کردن ندارد روش dex2jar است.در این متد بدون نیاز به decompile کردن APK می توانیم به کدها با زبان java دسترسی داشته باشیم و آنها را تحلیل کنیم.در داخل سیستم عامل SANTOKU یک ابزار به نام Dex2jar وجود دارد که فایل های Dex را به jar تبدیل می کند. برای استفاده از این ابزار لازم است دستور زیر را در ترمینال وارد کنیم:</string>
-    <string name="dex2jardex">dex2jar <b>[DEX-FILE]</b></string>
-    <string name="dex2jardes3">در لاگ هایی که ثبت می شود می توانیم تبدیل dex به jar را مشاهده کنیم.در گام بعدی برای آنالیز کد java از دستور زیر استفاده می کنیم:</string>
-    <string name="dex2jardes4">Jd-gui <b>[JAR-FILE]</b></string>
-    <string name="dex2jardes5">در دستور بالا از فایل jar  استفاده می کنیم  و در نهایت به فایل های java موردنظر دسترسی پیدا می کنیم  و می توانیم آنها را تحلیل کنیم.</string>
-
 </resources>

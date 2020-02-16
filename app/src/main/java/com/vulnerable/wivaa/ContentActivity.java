@@ -322,8 +322,8 @@ public class ContentActivity extends AppCompatActivity {
                 ImageView cat7_cancel = (ImageView) alertView_webview.findViewById(R.id.cat7_cancel);
                 ImageView cat7_1 = (ImageView) alertView_webview.findViewById(R.id.cat7_1);
                 ImageView cat7_2 = (ImageView) alertView_webview.findViewById(R.id.cat7_2);
-                ImageView cat7_3 = (ImageView) alertView_webview.findViewById(R.id.cat7_3);
-                ImageView cat7_4 = (ImageView) alertView_webview.findViewById(R.id.cat7_4);
+                //ImageView cat7_3 = (ImageView) alertView_webview.findViewById(R.id.cat7_3);
+                //ImageView cat7_4 = (ImageView) alertView_webview.findViewById(R.id.cat7_4);
 
                 cat7_cancel.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -345,7 +345,7 @@ public class ContentActivity extends AppCompatActivity {
                         customType(ContentActivity.this,"fadein-to-fadeout");
                     }
                 });
-                cat7_3.setOnClickListener(new View.OnClickListener() {
+                /*cat7_3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         startActivity(new Intent(ContentActivity.this,ClearTextActivity.class));
@@ -358,7 +358,7 @@ public class ContentActivity extends AppCompatActivity {
                         startActivity(new Intent(ContentActivity.this,SSLActivity.class));
                         customType(ContentActivity.this,"fadein-to-fadeout");
                     }
-                });
+                });*/
             }
         });
     }

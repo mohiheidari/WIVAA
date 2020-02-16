@@ -55,8 +55,7 @@
             android:paddingLeft="15dp"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:visibility="visible"
-            android:lineSpacingExtra="10dp"/>
+            android:visibility="visible"/>
 
         <EditText
             android:id="@+id/Key"
